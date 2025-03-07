@@ -1,0 +1,19 @@
+{
+  "name": "pvtravel-admin",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for the administrative interface of the travelling website PVTravel. It provides tools that enable administrators to manage tours, handle bookings, view customer data, and control website settings.",
+  "main": "index.js",
+  "scripts": {
+    "start": "pug -w ./views/pages -o ./ -P",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
