@@ -17,3 +17,151 @@ body {
 a {
   text-decoration: none;
 }
+
+/* page-account */
+.page-account {
+  background-image: url('../images/bg-account.svg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+/* End page-account */
+
+/* form-account */
+.form-account {
+  background-color: #fff;
+  border-radius: 24px;
+  width: 630px;
+  margin: 0 auto;
+  padding: 90px 57px;
+}
+
+.form-account .inner-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.form-account .inner-desc {
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.form-account .inner-form {
+  margin-bottom: 30px;
+}
+
+.form-account .inner-group {
+  margin-bottom: 30px;
+}
+
+.form-account .inner-group .inner-label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.form-account .inner-group .inner-control {
+  width: 100%;
+  height: 56px;
+  background-color: #f1f4f9;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  outline: none;
+}
+
+.form-account .inner-group .inner-control::placeholder {
+  color: #a6a6a6;
+}
+
+.form-account .inner-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form-account .inner-confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-account .inner-confirm .inner-check {
+  width: 24px;
+  height: 24px;
+}
+
+.form-account .inner-confirm .inner-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.form-account .inner-forgot-password {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.form-account .inner-forgot-password:hover {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.form-account .inner-button {
+  width: 100%;
+  height: 56px;
+  border: 0;
+  border-radius: 8px;
+  outline: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.form-account .inner-button:hover {
+  opacity: 1;
+}
+
+.form-account .inner-more {
+  text-align: center;
+}
+
+.form-account .inner-more span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.65;
+}
+
+.form-account .inner-more a {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: underline;
+  margin-left: 10px;
+}
+/* End form-account */
