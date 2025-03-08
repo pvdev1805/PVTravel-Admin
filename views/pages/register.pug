@@ -1,17 +1,31 @@
 extends ../layouts/account.pug
 
 block title 
-  title Sign In 
+  title Sign Up
 
 block main 
-  .form-account 
-    h2.inner-title Sign In
-    p.inner-desc Enter your email and password to access admin panel
+  .form-account
+    h2.inner-title Sign Up
+    p.inner-desc Create your account to access admin panel
 
     form.inner-form
       .inner-group 
         label(
-          for="email" 
+          for="fullName"
+          class="inner-label"
+        ) Full Name
+
+        input(
+          type="text"
+          id="fullName"
+          name=""
+          placeholder="Example: John Smith"
+          class="inner-control"
+        )
+      
+      .inner-group 
+        label(
+          for="email"
           class="inner-label"
         ) Email
 
@@ -21,11 +35,11 @@ block main
           name=""
           placeholder="Example: johnsmith@gmail.com"
           class="inner-control"
-        ) 
+        )
 
       .inner-group 
         label(
-          for="password" 
+          for="password"
           class="inner-label"
         ) Password
 
@@ -36,28 +50,22 @@ block main
           class="inner-control"
         )
 
-      .inner-meta 
+      .inner-meta
         .inner-confirm 
           input(
             type="checkbox"
-            id="remember-password"
+            id="agree"
             name=""
             class="inner-check"
           )
 
           label(
-            for="remember-password"
+            for="agree"
             class="inner-label"
-          ) Remember password
+          ) I agree to the terms and conditions
 
-        a(
-          href="#"
-          class="inner-forgot-password"
-        ) Forgot password?
-
-      button(class="inner-button") Sign In
+      button(class="inner-button") Sign Up
 
     .inner-more 
-      span Don't have an account?
-      a(href="#") Sign Up
-        
+      span Already have an account?
+      a(href="#") Sign In
