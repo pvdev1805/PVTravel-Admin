@@ -164,4 +164,64 @@ a {
   text-decoration: underline;
   margin-left: 10px;
 }
+
+/* Responsive form-account */
+@media screen and (max-width: 991.98px) {
+  .form-account {
+    border-radius: 20px;
+    width: 500px;
+    padding: 50px 30px;
+  }
+
+  .form-account .inner-title {
+    font-size: 28px;
+  }
+
+  .form-account .inner-desc {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  .form-account .inner-group .inner-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .form-account .inner-group .inner-control {
+    font-size: 16px;
+  }
+
+  .form-account .inner-confirm .inner-check {
+    width: 18px;
+    height: 18px;
+  }
+
+  .form-account .inner-confirm .inner-label {
+    font-size: 16px;
+  }
+
+  .form-account .inner-forgot-password {
+    font-size: 16px;
+  }
+
+  .form-account .inner-button {
+    font-size: 16px;
+  }
+
+  .form-account .inner-more span {
+    font-size: 16px;
+  }
+
+  .form-account .inner-more a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .form-account {
+    width: 95%;
+  }
+}
+/* End Responsive form-account */
+
 /* End form-account */
