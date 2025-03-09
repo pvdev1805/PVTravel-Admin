@@ -225,3 +225,50 @@ a {
 /* End Responsive form-account */
 
 /* End form-account */
+
+/* Header */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* End Header */
+
+/* Sider */
+.sider {
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  width: 240px;
+  height: calc(100vh - 70px);
+  position: fixed;
+  top: 70px;
+  left: 0;
+  overflow-y: auto;
+}
+
+.sider::-webkit-scrollbar {
+  width: 3px;
+}
+
+.sider::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+/* End Sider */
+
+/* Main */
+.main {
+  position: absolute;
+  top: 70px;
+  left: 240px;
+  background-color: #f5f6fa;
+  width: calc(100% - 240px);
+  min-height: calc(100vh - 70px);
+}
+/* End Main */
