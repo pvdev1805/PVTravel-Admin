@@ -461,3 +461,42 @@ a {
   font-weight: 700;
 }
 /* End Section 1 */
+
+/* Section 2 */
+.section-2 {
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 6px 6px 54px 0px #0000000d;
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.section-2 .inner-head {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-2 .inner-head .inner-title {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.section-2 .inner-head .inner-filter input {
+  height: 28px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  width: 180px;
+  padding: 0 16px;
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.section-2 .inner-chart {
+  height: 273px;
+}
+/* End Section 2 */
