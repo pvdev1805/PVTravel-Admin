@@ -500,3 +500,131 @@ a {
   height: 273px;
 }
 /* End Section 2 */
+
+/* Section 3 */
+.section-3 {
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 6px 6px 54px 0px #0000000d;
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.section-3 .inner-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+/* End Section 3 */
+
+/* Table 1 */
+.table-1 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-1 thead th {
+  background-color: #f1f4f9;
+  padding: 14px 24px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.table-1 thead th:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.table-1 thead th:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.table-1 .inner-text-right {
+  text-align: right;
+}
+
+.table-1 tbody td {
+  padding: 10px 24px;
+  border-bottom: 1px solid #97979754;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.table-1 tbody td .inner-code {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.table-1 .inner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.table-1 .inner-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-1 .inner-item .inner-image {
+  width: 76px;
+  height: 76px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table-1 .inner-item .inner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.table-1 .inner-item .inner-content {
+  flex: 1;
+}
+
+.table-1 .inner-item .inner-content .inner-name {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.table-1 .inner-item .inner-content .inner-quantity {
+  margin-top: 3px;
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 600;
+}
+/* End Table 1 */
+
+/* Badge */
+.badge {
+  border-radius: 4.5px;
+  padding: 6px 22px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-orange {
+  background-color: rgba(255, 168, 87, 0.2);
+  color: #ffa756;
+}
+
+.badge-green {
+  background-color: rgba(0, 182, 155, 0.2);
+  color: #00b69b;
+}
+
+.badge-red {
+  background-color: rgba(239, 55, 38, 0.2);
+  color: #ef3826;
+}
+
+/* End Badge */
