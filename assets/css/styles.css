@@ -312,6 +312,10 @@ a {
   object-fit: cover;
 }
 
+.header .inner-account .inner-text {
+  flex: 1;
+}
+
 .header .inner-account .inner-name {
   margin-bottom: 3px;
   color: #404040;
@@ -324,6 +328,36 @@ a {
   font-size: 12px;
   font-weight: 600;
 }
+
+.header .inner-button-menu {
+  display: none;
+}
+
+/* Responsive Header */
+@media screen and (max-width: 991.98px) {
+  .header .inner-button-menu {
+    display: inline-block;
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .header .inner-logo {
+    width: auto;
+    margin-left: 15px;
+  }
+
+  .header .inner-wrap {
+    gap: 15px;
+    margin-right: 15px;
+  }
+}
+/* End Responsive Header */
 
 /* End Header */
 
@@ -398,6 +432,15 @@ a {
   margin: 16px 0;
   border: 1px solid #e0e0e0;
 }
+
+/* Responsive Sider */
+@media screen and (max-width: 991.98px) {
+  .sider {
+    display: none;
+  }
+}
+/* End Responsive Sider */
+
 /* End Sider */
 
 /* Main */
@@ -409,6 +452,19 @@ a {
   width: calc(100% - 240px);
   min-height: calc(100vh - 70px);
   padding: 30px;
+}
+
+@media screen and (max-width: 991.98px) {
+  .main {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .main {
+    padding: 30px 15px;
+  }
 }
 /* End Main */
 
