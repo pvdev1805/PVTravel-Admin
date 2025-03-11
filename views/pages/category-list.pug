@@ -1,0 +1,30 @@
+extends ../layouts/default.pug
+
+block title 
+  title Category List
+
+block main 
+  h1.box-title Category List
+
+  //- Section 4
+  section.section-4 
+    .inner-wrap 
+      .inner-item.inner-label
+        <i class="fa-solid fa-filter"></i> Filter
+      .inner-item
+        select
+          option(value="") Status 
+          option(value="") Active 
+          option(value="") Inactive  
+      .inner-item
+        select
+          option(value="") Creator 
+          option(value="") John Doe 
+          option(value="") Jane Doe 
+      .inner-item.inner-date
+        input(type="date" placeholder="From")
+        span -
+        input(type="date" placeholder="To") 
+      .inner-item.inner-reset 
+        <i class="fa-solid fa-rotate-left"></i> Clear Filter
+  //- End Section 4

@@ -706,3 +706,56 @@ a {
 }
 
 /* End Badge */
+
+/* Section 4 */
+.section-4 {
+  margin-bottom: 15px;
+}
+
+.section-4 .inner-wrap {
+  background-color: #fff;
+  border: 1px solid #d5d5d5;
+  border-radius: 14px;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.section-4 .inner-item {
+  border-right: 1px solid #d5d5d5;
+  padding: 23.75px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.section-4 .inner-item:last-child {
+  border-right: 0;
+}
+
+.section-4 .inner-item i {
+  font-size: 22px;
+}
+
+.section-4 .inner-item select,
+.section-4 .inner-item input[type='date'] {
+  border: 0;
+  outline: none;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.section-4 .inner-item input[type='date'] {
+  width: 110px;
+}
+
+.section-4 .inner-reset {
+  color: #ea0234;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* End Section 4 */
