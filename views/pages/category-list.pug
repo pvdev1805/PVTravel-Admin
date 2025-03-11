@@ -28,3 +28,24 @@ block main
       .inner-item.inner-reset 
         <i class="fa-solid fa-rotate-left"></i> Clear Filter
   //- End Section 4
+
+  //- Section 5
+  section.section-5 
+    .inner-wrap 
+      .inner-change-status
+        .inner-item
+          select
+            option(value="") -- Status --
+            option(value="") Active 
+            option(value="") Inactive 
+            option(value="") Deleted 
+        .inner-item
+          button Apply 
+      
+      .inner-search
+        <i class="fa-solid fa-magnifying-glass"></i>
+        input(type="text" placeholder="Search")
+      
+      .inner-button-create 
+        button <i class="fa-solid fa-plus"></i> Create Category
+  //- End Section 5
