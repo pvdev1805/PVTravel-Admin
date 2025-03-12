@@ -876,6 +876,27 @@ a {
   font-size: 20px;
 }
 
+.section-5 .inner-button-delete button {
+  background-color: #ef382633;
+  color: #ef3826;
+  border: 0;
+  border-radius: 14px;
+  opacity: 0.9;
+  padding: 0 28px;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 42px;
+}
+
+.section-5 .inner-button-delete button i {
+  font-size: 20px;
+}
+
 /* Responsive Section 5 */
 @media screen and (max-width: 1199.98px) {
   .section-5 .inner-change-status .inner-item {

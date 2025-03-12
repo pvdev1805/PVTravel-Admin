@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour List </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="inner-logo"> <a href="#"><span>PV</span><span>Travel</span></a></div>
+      <div class="inner-wrap"> 
+        <div class="inner-notify"> <img src="assets/images/icon-bell.svg" alt="Bell Icon"><span>6</span></div>
+        <div class="inner-account"> 
+          <div class="inner-avatar"> <img src="assets/images/avatar.png" alt="Avatar"></div>
+          <div class="inner-text"> 
+            <div class="inner-name">John Smith </div>
+            <div class="inner-role">Admin</div>
+          </div>
+        </div>
+        <button class="inner-button-menu">
+           <i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <nav class="sider"> 
+      <ul class="inner-menu"> 
+        <li><a class="active" href="#"><i class="fa-solid fa-gauge-high"></i> Dashboard </a></li>
+        <li><a href="#"><i class="fa-solid fa-table-list"></i> Category Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-box"></i> Tour Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-list-check"></i> Order Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i> User Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user-group"></i> Contact Information</a></li>
+      </ul>
+      <hr>
+      <ul class="inner-menu"> 
+        <li> <a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        <li> <a href="#"><i class="fa-solid fa-user-gear"></i> User Profile</a></li>
+        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main"> 
+      <h1 class="box-title">Tour List</h1>
+      <section class="section-4"> 
+        <div class="inner-wrap"> 
+          <div class="inner-item inner-label"><i class="fa-solid fa-filter"></i> Filter</div>
+          <div class="inner-item">
+            <select>
+              <option value="">Status </option>
+              <option value="">Active </option>
+              <option value="">Inactive  </option>
+            </select>
+          </div>
+          <div class="inner-item">
+            <select>
+              <option value="">Creator </option>
+              <option value="">John Doe </option>
+              <option value="">Jane Doe </option>
+            </select>
+          </div>
+          <div class="inner-item inner-date">
+            <input type="date" placeholder="From"><span>-</span>
+            <input type="date" placeholder="To">
+          </div>
+          <div class="inner-item"> 
+            <select>
+              <option value="">-- Category --</option>
+              <option value="">Category 1 </option>
+              <option value="">Category 2 </option>
+              <option value="">Category 3</option>
+            </select>
+          </div>
+          <div class="inner-item">
+            <select>
+              <option value="">-- Price Range --</option>
+              <option value="">Lower than $200 </option>
+              <option value="">$200 - $500 </option>
+              <option value="">$500 - $700</option>
+              <option value="">$700 - $1000</option>
+              <option value="">Higher than $1000</option>
+            </select>
+          </div>
+          <div class="inner-item inner-reset">
+             <i class="fa-solid fa-rotate-left"></i> Clear Filter</div>
+        </div>
+      </section>
+      <section class="section-5"> 
+        <div class="inner-wrap"> 
+          <div class="inner-change-status">
+            <div class="inner-item">
+              <select>
+                <option value="">-- Actions --</option>
+                <option value="">Active </option>
+                <option value="">Inactive </option>
+                <option value="">Deleted </option>
+              </select>
+            </div>
+            <div class="inner-item">
+              <button>Apply </button>
+            </div>
+          </div>
+          <div class="inner-search"><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="inner-button-create"> 
+            <button><i class="fa-solid fa-plus"></i> Create Category</button>
+          </div>
+          <div class="inner-button-delete"> 
+            <button><i class="fa-solid fa-trash"></i> Trash Bin</button>
+          </div>
+        </div>
+      </section>
+      <section class="section-6"> 
+        <div class="table-2"> 
+          <table> 
+            <thead> 
+              <tr> 
+                <th class="inner-center">
+                  <input class="inner-check" type="checkbox">
+                </th>
+                <th>Category Name</th>
+                <th>Thumbnail</th>
+                <th>Price</th>
+                <th>Availability</th>
+                <th class="inner-center">Position</th>
+                <th class="inner-center">Status</th>
+                <th>Created By</th>
+                <th>Updated By</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr> 
+                <td class="inner-center">
+                  <input class="inner-check" type="checkbox">
+                </td>
+                <td>Category 1</td>
+                <td> <img class="inner-avatar" src="assets/images/tour-1.jpeg" alt="Category 1"></td>
+                <td> 
+                  <div>Adult: $200</div>
+                  <div>Child: $100</div>
+                  <div>Infant: $50</div>
+                </td>
+                <td> 
+                  <div>Adult: 10</div>
+                  <div>Child: 20</div>
+                  <div>Infant: 5</div>
+                </td>
+                <td class="inner-center">1</td>
+                <td class="inner-center">
+                  <div class="badge badge-green">Active</div>
+                </td>
+                <td> 
+                  <div>John Doe </div>
+                  <div class="inner-time">16:30 - 20/07/2025</div>
+                </td>
+                <td> 
+                  <div>John Doe </div>
+                  <div class="inner-time">10:30 - 22/07/2025</div>
+                </td>
+                <td>
+                  <div class="inner-buttons"> 
+                    <button class="inner-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="inner-delete"><i class="fa-regular fa-trash-can"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="inner-center">
+                  <input class="inner-check" type="checkbox">
+                </td>
+                <td>Category 2</td>
+                <td> <img class="inner-avatar" src="assets/images/tour-1.jpeg" alt="Category 1"></td>
+                <td> 
+                  <div>Adult: $200</div>
+                  <div>Child: $100</div>
+                  <div>Infant: $50</div>
+                </td>
+                <td> 
+                  <div>Adult: 10</div>
+                  <div>Child: 20</div>
+                  <div>Infant: 5</div>
+                </td>
+                <td class="inner-center">2</td>
+                <td class="inner-center">
+                  <div class="badge badge-red">Inactive</div>
+                </td>
+                <td> 
+                  <div>John Doe </div>
+                  <div class="inner-time">16:30 - 20/07/2025</div>
+                </td>
+                <td> 
+                  <div>Jane Doe </div>
+                  <div class="inner-time">10:30 - 22/07/2025</div>
+                </td>
+                <td>
+                  <div class="inner-buttons"> 
+                    <button class="inner-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="inner-delete"><i class="fa-regular fa-trash-can"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="section-7"> <span class="inner-label">Showing 1 - 9 of 78 entries</span>
+        <select class="inner-pagination">
+          <option>Page 1</option>
+          <option>Page 2</option>
+          <option>Page 3</option>
+        </select>
+      </section>
+    </main>
+  </body>
+</html>
