@@ -758,6 +758,21 @@ a {
   font-weight: 600;
   cursor: pointer;
 }
+
+/* Responsive Section 4 */
+@media screen and (max-width: 1199.98px) {
+  .section-4 .inner-item {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .section-4 .inner-item {
+    padding: 10px 14px;
+  }
+}
+/* End Responsive Section 4 */
+
 /* End Section 4 */
 
 /* Section 5 */
@@ -821,10 +836,19 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 15px;
+  min-height: 42px;
 }
 
 .section-5 .inner-search i {
   font-size: 20px;
+}
+
+.section-5 .inner-search input {
+  border: 0;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .section-5 .inner-search input::placeholder {
@@ -845,11 +869,33 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  min-height: 42px;
 }
 
 .section-5 .inner-button-create button i {
   font-size: 20px;
 }
+
+/* Responsive Section 5 */
+@media screen and (max-width: 1199.98px) {
+  .section-5 .inner-change-status .inner-item {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .section-5 .inner-change-status .inner-item {
+    padding: 10px 14px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .section-5 .inner-search {
+    width: 100%;
+  }
+}
+/* End Responsive Section 5 */
+
 /* End Section 5 */
 
 /* Section 6 */
@@ -859,12 +905,17 @@ a {
 /* End Section 6 */
 
 /* Table 2 */
+.table-2 {
+  overflow-x: auto;
+}
+
 .table-2 table {
   background-color: #fff;
   border: 1px solid #b9b9b9;
   border-radius: 14px;
   width: 100%;
   overflow: hidden;
+  min-width: 1141px;
 }
 
 .table-2 table thead tr th {
