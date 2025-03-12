@@ -1,0 +1,42 @@
+extends ../layouts/default.pug
+
+block title 
+  title Create Category
+
+block main 
+  h1.box-title Create Category
+
+  //- Section 8
+  section.section-8 
+    form
+      .inner-group
+        label(for="name" class="inner-label") Category Name
+        input(type="text" id="name")
+      .inner-group 
+        label(for="parent" class="inner-label") Parent Category
+        select(id="parent")
+          option(value="") -- Select Category --
+          option(value="") Category 1
+          option(value="") Category 2
+          option(value="") Category 3
+      .inner-group 
+        label(for="position" class="inner-label") Position
+        input(type="number" id="position")
+      .inner-group 
+        label(for="status" class="inner-label") Status
+        select(id="status")
+          option(value="") -- Select Status --
+          option(value="") Active
+          option(value="") Inactive
+      .inner-group.inner-two-col
+        label(for="avatar" class="inner-label") Avatar
+        div(class="inner-input-image")
+          input(type="file" id="avatar" accept="image/*")
+      .inner-group.inner-two-col 
+        label(for="description" class="inner-label") Description
+        textarea(id="description")
+      .inner-button.inner-two-col 
+        button Create
+    .inner-back 
+      a(href="#") Back to Category List 
+  //- End Section 8
