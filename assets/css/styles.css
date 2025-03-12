@@ -1094,4 +1094,21 @@ a {
   font-size: 18px;
   font-weight: 700;
 }
+
+/* Responsive Section 8 */
+@media screen and (max-width: 767.98px) {
+  .section-8 {
+    padding: 20px;
+  }
+
+  .section-8 form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section-8 .inner-two-col {
+    grid-column: span 1;
+  }
+}
+/* End Responsive Section 8 */
+
 /* End Section 8 */
