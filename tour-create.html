@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Tour </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="inner-logo"> <a href="#"><span>PV</span><span>Travel</span></a></div>
+      <div class="inner-wrap"> 
+        <div class="inner-notify"> <img src="assets/images/icon-bell.svg" alt="Bell Icon"><span>6</span></div>
+        <div class="inner-account"> 
+          <div class="inner-avatar"> <img src="assets/images/avatar.png" alt="Avatar"></div>
+          <div class="inner-text"> 
+            <div class="inner-name">John Smith </div>
+            <div class="inner-role">Admin</div>
+          </div>
+        </div>
+        <button class="inner-button-menu">
+           <i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <nav class="sider"> 
+      <ul class="inner-menu"> 
+        <li><a class="active" href="#"><i class="fa-solid fa-gauge-high"></i> Dashboard </a></li>
+        <li><a href="#"><i class="fa-solid fa-table-list"></i> Category Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-box"></i> Tour Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-list-check"></i> Order Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i> User Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user-group"></i> Contact Information</a></li>
+      </ul>
+      <hr>
+      <ul class="inner-menu"> 
+        <li> <a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        <li> <a href="#"><i class="fa-solid fa-user-gear"></i> User Profile</a></li>
+        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main"> 
+      <h1 class="box-title">Create Tour</h1>
+      <section class="section-8"> 
+        <form>
+          <div class="inner-group">
+            <label class="inner-label" for="name">Category Name</label>
+            <input type="text" id="name">
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="parent">Parent Category</label>
+            <select id="parent">
+              <option value="">-- Select Category --</option>
+              <option value="">Category 1</option>
+              <option value="">Category 2</option>
+              <option value="">Category 3</option>
+            </select>
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="position">Position</label>
+            <input type="number" id="position">
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="status">Status</label>
+            <select id="status">
+              <option value="">-- Select Status --</option>
+              <option value="">Active</option>
+              <option value="">Inactive</option>
+            </select>
+          </div>
+          <div class="inner-group inner-two-col">
+            <label class="inner-label" for="avatar">Avatar</label>
+            <div class="inner-input-image">
+              <input type="file" id="avatar" accept="image/*">
+            </div>
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label">Old price </label>
+            <div class="inner-input-list"> 
+              <div class="inner-input-item"> 
+                <label>Adult</label>
+                <input type="number">
+              </div>
+              <div class="inner-input-item"> 
+                <label>Child</label>
+                <input type="number">
+              </div>
+              <div class="inner-input-item"> 
+                <label>Infant</label>
+                <input type="number">
+              </div>
+            </div>
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label">New price </label>
+            <div class="inner-input-list"> 
+              <div class="inner-input-item"> 
+                <label>Adult</label>
+                <input type="number">
+              </div>
+              <div class="inner-input-item"> 
+                <label>Child</label>
+                <input type="number">
+              </div>
+              <div class="inner-input-item"> 
+                <label>Infant</label>
+                <input type="number">
+              </div>
+            </div>
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label">Availability</label>
+            <div class="inner-input-list"> 
+              <div class="inner-input-item"> 
+                <label>Adult</label>
+                <input type="number">
+              </div>
+              <div class="inner-input-item"> 
+                <label>Child</label>
+                <input type="number">
+              </div>
+              <div class="inner-input-item"> 
+                <label>Infant</label>
+                <input type="number">
+              </div>
+            </div>
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label">Tour is available in</label>
+            <div class="inner-checkbox-list"> 
+              <div class="inner-checkbox-item"> 
+                <input type="checkbox">
+                <label>Queensland</label>
+              </div>
+              <div class="inner-checkbox-item"> 
+                <input type="checkbox">
+                <label>New South Wales</label>
+              </div>
+              <div class="inner-checkbox-item"> 
+                <input type="checkbox">
+                <label>Victoria</label>
+              </div>
+              <div class="inner-checkbox-item"> 
+                <input type="checkbox">
+                <label>Tasmania</label>
+              </div>
+            </div>
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="time">Duration </label>
+            <input type="text" id="time">
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="vehicle">Vehicle </label>
+            <input type="text" id="vehicle">
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="departureDate">Departure Date </label>
+            <input type="date" id="departureDate">
+          </div>
+          <div class="inner-group inner-two-col"> 
+            <label class="inner-label" for="information">Tour Information</label>
+            <textarea id="information"></textarea>
+          </div>
+          <div class="inner-group inner-two-col">
+            <label class="inner-label">Tour Schedule</label>
+            <div class="inner-schedule">
+              <div class="inner-schedule-list"> 
+                <div class="inner-schedule-item"> 
+                  <div class="inner-schedule-head"> <span class="inner-schedule-button inner-move"><i class="fa-solid fa-arrows-up-down-left-right"></i></span>
+                    <input type="text"><span class="inner-schedule-button inner-remove"><i class="fa-regular fa-trash-can"></i></span><span class="inner-schedule-button inner-more"><i class="fa-solid fa-angle-down"></i></span>
+                  </div>
+                  <div class="inner-schedule-body"> 
+                    <textarea></textarea>
+                  </div>
+                </div>
+                <div class="inner-schedule-item"> 
+                  <div class="inner-schedule-head"> <span class="inner-schedule-button inner-move"><i class="fa-solid fa-arrows-up-down-left-right"></i></span>
+                    <input type="text"><span class="inner-schedule-button inner-remove"><i class="fa-regular fa-trash-can"></i></span><span class="inner-schedule-button inner-more"><i class="fa-solid fa-angle-down"></i></span>
+                  </div>
+                  <div class="inner-schedule-body"> 
+                    <textarea></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="inner-schedule-create">+ Add Schedule</div>
+            </div>
+          </div>
+          <div class="inner-button inner-two-col"> 
+            <button>Create</button>
+          </div>
+        </form>
+        <div class="inner-back"> <a href="#">Back to Category List </a></div>
+      </section>
+    </main>
+  </body>
+</html>

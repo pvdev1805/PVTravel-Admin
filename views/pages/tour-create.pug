@@ -1,0 +1,129 @@
+extends ../layouts/default.pug
+
+block title 
+  title Create Tour 
+
+block main 
+  h1.box-title Create Tour
+
+  //- Section 8
+  section.section-8 
+    form
+      .inner-group
+        label(for="name" class="inner-label") Category Name
+        input(type="text" id="name")
+      .inner-group 
+        label(for="parent" class="inner-label") Parent Category
+        select(id="parent")
+          option(value="") -- Select Category --
+          option(value="") Category 1
+          option(value="") Category 2
+          option(value="") Category 3
+      .inner-group 
+        label(for="position" class="inner-label") Position
+        input(type="number" id="position")
+      .inner-group 
+        label(for="status" class="inner-label") Status
+        select(id="status")
+          option(value="") -- Select Status --
+          option(value="") Active
+          option(value="") Inactive
+      .inner-group.inner-two-col
+        label(for="avatar" class="inner-label") Avatar
+        div(class="inner-input-image")
+          input(type="file" id="avatar" accept="image/*")
+      .inner-group 
+        label(class="inner-label") Old price 
+        .inner-input-list 
+          .inner-input-item 
+            label Adult
+            input(type="number")
+          .inner-input-item 
+            label Child
+            input(type="number")
+          .inner-input-item 
+            label Infant
+            input(type="number")
+      .inner-group 
+        label(class="inner-label") New price 
+        .inner-input-list 
+          .inner-input-item 
+            label Adult
+            input(type="number")
+          .inner-input-item 
+            label Child
+            input(type="number")
+          .inner-input-item 
+            label Infant
+            input(type="number")
+      .inner-group 
+        label(class="inner-label") Availability
+        .inner-input-list 
+          .inner-input-item 
+            label Adult
+            input(type="number")
+          .inner-input-item 
+            label Child
+            input(type="number")
+          .inner-input-item 
+            label Infant
+            input(type="number")
+      .inner-group 
+        label(class="inner-label") Tour is available in
+        .inner-checkbox-list 
+          .inner-checkbox-item 
+            input(type="checkbox")
+            label Queensland
+          .inner-checkbox-item 
+            input(type="checkbox")
+            label New South Wales
+          .inner-checkbox-item 
+            input(type="checkbox")
+            label Victoria
+          .inner-checkbox-item 
+            input(type="checkbox")
+            label Tasmania
+      .inner-group 
+        label(for="time" class="inner-label") Duration 
+        input(type="text" id="time")
+      .inner-group 
+        label(for="vehicle" class="inner-label") Vehicle 
+        input(type="text" id="vehicle")
+      .inner-group 
+        label(for="departureDate" class="inner-label") Departure Date 
+        input(type="date" id="departureDate")
+      .inner-group.inner-two-col 
+        label(for="information" class="inner-label") Tour Information
+        textarea(id="information")
+      .inner-group.inner-two-col
+        label(class="inner-label") Tour Schedule
+        .inner-schedule
+          .inner-schedule-list 
+            .inner-schedule-item 
+              .inner-schedule-head 
+                span(class="inner-schedule-button inner-move")
+                  <i class="fa-solid fa-arrows-up-down-left-right"></i>
+                input(type="text")
+                span(class="inner-schedule-button inner-remove")
+                  <i class="fa-regular fa-trash-can"></i>
+                span(class="inner-schedule-button inner-more")
+                  <i class="fa-solid fa-angle-down"></i>
+              .inner-schedule-body 
+                textarea
+            .inner-schedule-item 
+              .inner-schedule-head 
+                span(class="inner-schedule-button inner-move")
+                  <i class="fa-solid fa-arrows-up-down-left-right"></i>
+                input(type="text")
+                span(class="inner-schedule-button inner-remove")
+                  <i class="fa-regular fa-trash-can"></i>
+                span(class="inner-schedule-button inner-more")
+                  <i class="fa-solid fa-angle-down"></i>
+              .inner-schedule-body 
+                textarea
+          .inner-schedule-create + Add Schedule
+      .inner-button.inner-two-col 
+        button Create
+    .inner-back 
+      a(href="#") Back to Category List 
+  //- End Section 8
