@@ -1,47 +1,10 @@
 extends ../layouts/default.pug
 
 block title 
-  title Tour List 
+  title Tour Trash
 
 block main 
-  h1.box-title Tour List
-
-  //- Section 4
-  section.section-4 
-    .inner-wrap 
-      .inner-item.inner-label
-        <i class="fa-solid fa-filter"></i> Filter
-      .inner-item
-        select
-          option(value="") Status 
-          option(value="") Active 
-          option(value="") Inactive  
-      .inner-item
-        select
-          option(value="") Creator 
-          option(value="") John Doe 
-          option(value="") Jane Doe 
-      .inner-item.inner-date
-        input(type="date" placeholder="From")
-        span -
-        input(type="date" placeholder="To") 
-      .inner-item 
-        select
-          option(value="") -- Category --
-          option(value="") Category 1 
-          option(value="") Category 2 
-          option(value="") Category 3
-      .inner-item
-        select
-          option(value="") -- Price Range --
-          option(value="") Lower than $200 
-          option(value="") $200 - $500 
-          option(value="") $500 - $700
-          option(value="") $700 - $1000
-          option(value="") Higher than $1000
-      .inner-item.inner-reset 
-        <i class="fa-solid fa-rotate-left"></i> Clear Filter
-  //- End Section 4
+  h1.box-title Tour Trash
 
   //- Section 5
   section.section-5 
@@ -50,20 +13,14 @@ block main
         .inner-item
           select
             option(value="") -- Actions --
-            option(value="") Active 
-            option(value="") Inactive 
-            option(value="") Deleted 
+            option(value="") Restore
+            option(value="") Delete Permanently 
         .inner-item
           button Apply 
       
       .inner-search
         <i class="fa-solid fa-magnifying-glass"></i>
         input(type="text" placeholder="Search")
-      
-      .inner-button-create 
-        button <i class="fa-solid fa-plus"></i> Create Category
-      .inner-button-delete 
-        button <i class="fa-solid fa-trash"></i> Trash Bin
   //- End Section 5
 
   //- Section 6
