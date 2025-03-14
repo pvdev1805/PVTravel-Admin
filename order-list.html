@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="inner-logo"> <a href="#"><span>PV</span><span>Travel</span></a></div>
+      <div class="inner-wrap"> 
+        <div class="inner-notify"> <img src="assets/images/icon-bell.svg" alt="Bell Icon"><span>6</span></div>
+        <div class="inner-account"> 
+          <div class="inner-avatar"> <img src="assets/images/avatar.png" alt="Avatar"></div>
+          <div class="inner-text"> 
+            <div class="inner-name">John Smith </div>
+            <div class="inner-role">Admin</div>
+          </div>
+        </div>
+        <button class="inner-button-menu">
+           <i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <nav class="sider"> 
+      <ul class="inner-menu"> 
+        <li><a class="active" href="#"><i class="fa-solid fa-gauge-high"></i> Dashboard </a></li>
+        <li><a href="#"><i class="fa-solid fa-table-list"></i> Category Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-box"></i> Tour Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-list-check"></i> Order Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i> User Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user-group"></i> Contact Information</a></li>
+      </ul>
+      <hr>
+      <ul class="inner-menu"> 
+        <li> <a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        <li> <a href="#"><i class="fa-solid fa-user-gear"></i> User Profile</a></li>
+        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main"> 
+      <h1 class="box-title">Order List </h1>
+      <section class="section-4"> 
+        <div class="inner-wrap"> 
+          <div class="inner-item inner-label"><i class="fa-solid fa-filter"></i> Filter</div>
+          <div class="inner-item">
+            <select>
+              <option value="">Status </option>
+              <option value="">Initial </option>
+              <option value="">Completed </option>
+              <option value="">Cancelled </option>
+            </select>
+          </div>
+          <div class="inner-item inner-date">
+            <input type="date" placeholder="From"><span>-</span>
+            <input type="date" placeholder="To">
+          </div>
+          <div class="inner-item">
+            <select>
+              <option value="">Payment Method</option>
+              <option value="">Cash </option>
+              <option value="">Credit Card</option>
+              <option value="">Bank Transfer</option>
+            </select>
+          </div>
+          <div class="inner-item">
+            <select>
+              <option value="">Payment Status</option>
+              <option value="">Paid </option>
+              <option value="">Pending</option>
+            </select>
+          </div>
+          <div class="inner-item inner-reset">
+             <i class="fa-solid fa-rotate-left"></i> Clear Filter</div>
+        </div>
+      </section>
+      <section class="section-5"> 
+        <div class="inner-wrap"> 
+          <div class="inner-search"><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+          </div>
+        </div>
+      </section>
+      <section class="section-6"> 
+        <div class="table-2"> 
+          <table> 
+            <thead> 
+              <tr> 
+                <th>Order ID</th>
+                <th>Customer Info</th>
+                <th>Tour List</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th class="inner-center">Ordered Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr> 
+                <td> 
+                  <div class="inner-code">PVGST001</div>
+                </td>
+                <td>
+                  <div>Full Name: Nicholas Cage</div>
+                  <div>Phone: 0123456789</div>
+                  <div>Note: Test...</div>
+                </td>
+                <td> 
+                  <div class="inner-list"> 
+                    <div class="inner-item"> 
+                      <div class="inner-image"> <img src="assets/images/tour-1.jpeg" alt="Order 1"></div>
+                      <div class="inner-content"> 
+                        <div class="inner-name">Tour Gold Coast</div>
+                        <div class="inner-quantity">Adult: 3 x $200</div>
+                        <div class="inner-quantity">Child: 2 x $100</div>
+                        <div class="inner-quantity">Infant: 1 x $50</div>
+                      </div>
+                    </div>
+                    <div class="inner-item">
+                      <div class="inner-image"> <img src="assets/images/tour-1.jpeg" alt="Order 2"></div>
+                      <div class="inner-content"> 
+                        <div class="inner-name">Tour Gold Coast</div>
+                        <div class="inner-quantity">Adult: 3 x $200</div>
+                        <div class="inner-quantity">Child: 2 x $100</div>
+                        <div class="inner-quantity">Infant: 1 x $50</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div>Total: $900</div>
+                  <div>Discount: $300</div>
+                  <div>Coupon: SUMMERTOUR2025</div>
+                  <div>Checkout: $600</div>
+                  <div>Payment Method: Credit Card</div>
+                  <div>Payment Status: Paid</div>
+                </td>
+                <td>
+                  <div class="badge badge-orange">Initial</div>
+                </td>
+                <td class="inner-center"> 
+                  <div>16:20</div>
+                  <div>01/09/2025</div>
+                </td>
+                <td>
+                  <div class="inner-buttons"> 
+                    <button class="inner-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="inner-delete"><i class="fa-regular fa-trash-can"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="section-7"> <span class="inner-label">Showing 1 - 9 of 78 entries</span>
+        <select class="inner-pagination">
+          <option>Page 1</option>
+          <option>Page 2</option>
+          <option>Page 3</option>
+        </select>
+      </section>
+    </main>
+  </body>
+</html>
