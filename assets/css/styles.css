@@ -1282,6 +1282,59 @@ a {
   font-weight: 700;
   cursor: pointer;
 }
+
+.section-8 form .inner-order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-8 form .inner-order-item {
+  display: flex;
+  gap: 12px;
+}
+
+.section-8 form .inner-order-image {
+  width: 115px;
+  height: 115px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.section-8 form .inner-order-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-8 form .inner-order-content {
+  flex: 1;
+}
+
+.section-8 form .inner-order-name {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-8 form .inner-order-text {
+  margin-top: 3px;
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.section-8 form .inner-order-total {
+  margin-top: 11px;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-8 form .inner-order-price {
+  color: #ef3826;
+  font-weight: 700;
+}
 /* Responsive Section 8 */
 @media screen and (max-width: 767.98px) {
   .section-8 {
