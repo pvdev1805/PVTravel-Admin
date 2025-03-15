@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Info </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="inner-logo"> <a href="#"><span>PV</span><span>Travel</span></a></div>
+      <div class="inner-wrap"> 
+        <div class="inner-notify"> <img src="assets/images/icon-bell.svg" alt="Bell Icon"><span>6</span></div>
+        <div class="inner-account"> 
+          <div class="inner-avatar"> <img src="assets/images/avatar.png" alt="Avatar"></div>
+          <div class="inner-text"> 
+            <div class="inner-name">John Smith </div>
+            <div class="inner-role">Admin</div>
+          </div>
+        </div>
+        <button class="inner-button-menu">
+           <i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <nav class="sider"> 
+      <ul class="inner-menu"> 
+        <li><a class="active" href="#"><i class="fa-solid fa-gauge-high"></i> Dashboard </a></li>
+        <li><a href="#"><i class="fa-solid fa-table-list"></i> Category Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-box"></i> Tour Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-list-check"></i> Order Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i> User Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user-group"></i> Contact Information</a></li>
+      </ul>
+      <hr>
+      <ul class="inner-menu"> 
+        <li> <a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        <li> <a href="#"><i class="fa-solid fa-user-gear"></i> User Profile</a></li>
+        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main"> 
+      <h1 class="box-title">Admin Info </h1>
+      <section class="section-4"> 
+        <div class="inner-wrap"> 
+          <div class="inner-item inner-label"><i class="fa-solid fa-filter"></i> Filter</div>
+          <div class="inner-item">
+            <select>
+              <option value="">Status </option>
+              <option value="">Active </option>
+              <option value="">Inactive  </option>
+            </select>
+          </div>
+          <div class="inner-item inner-date">
+            <input type="date" placeholder="From"><span>-</span>
+            <input type="date" placeholder="To">
+          </div>
+          <div class="inner-item"> 
+            <select>
+              <option value="">-- Permission --</option>
+              <option value="">Admin</option>
+              <option value="">Tour Manager </option>
+              <option value="">Order Manager</option>
+            </select>
+          </div>
+          <div class="inner-item inner-reset">
+             <i class="fa-solid fa-rotate-left"></i> Clear Filter</div>
+        </div>
+      </section>
+      <section class="section-5"> 
+        <div class="inner-wrap"> 
+          <div class="inner-change-status">
+            <div class="inner-item">
+              <select>
+                <option value="">-- Actions --</option>
+                <option value="">Active </option>
+                <option value="">Inactive </option>
+                <option value="">Deleted </option>
+              </select>
+            </div>
+            <div class="inner-item">
+              <button>Apply </button>
+            </div>
+          </div>
+          <div class="inner-search"><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="inner-button-create"> 
+            <button><i class="fa-solid fa-plus"></i> Create</button>
+          </div>
+        </div>
+      </section>
+      <section class="section-6"> 
+        <div class="table-2"> 
+          <table> 
+            <thead> 
+              <tr> 
+                <th class="inner-center">
+                  <input class="inner-check" type="checkbox">
+                </th>
+                <th>Full Name</th>
+                <th class="inner-center">Avatar</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Permission</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr> 
+                <td class="inner-center">
+                  <input class="inner-check" type="checkbox">
+                </td>
+                <td>John Doe</td>
+                <td class="inner-center"> <img class="inner-avatar" src="assets/images/avatar.png" alt="User 1"></td>
+                <td>johndoe@gmail.com</td>
+                <td>0123456789</td>
+                <td>Admin</td>
+                <td>President</td>
+                <td>
+                  <div class="badge badge-green">Active</div>
+                </td>
+                <td>
+                  <div class="inner-buttons"> 
+                    <button class="inner-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="inner-delete"><i class="fa-regular fa-trash-can"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="section-7"> <span class="inner-label">Showing 1 - 9 of 78 entries</span>
+        <select class="inner-pagination">
+          <option>Page 1</option>
+          <option>Page 2</option>
+          <option>Page 3</option>
+        </select>
+      </section>
+    </main>
+  </body>
+</html>
