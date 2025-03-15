@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Admin Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="inner-logo"> <a href="#"><span>PV</span><span>Travel</span></a></div>
+      <div class="inner-wrap"> 
+        <div class="inner-notify"> <img src="assets/images/icon-bell.svg" alt="Bell Icon"><span>6</span></div>
+        <div class="inner-account"> 
+          <div class="inner-avatar"> <img src="assets/images/avatar.png" alt="Avatar"></div>
+          <div class="inner-text"> 
+            <div class="inner-name">John Smith </div>
+            <div class="inner-role">Admin</div>
+          </div>
+        </div>
+        <button class="inner-button-menu">
+           <i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <nav class="sider"> 
+      <ul class="inner-menu"> 
+        <li><a class="active" href="#"><i class="fa-solid fa-gauge-high"></i> Dashboard </a></li>
+        <li><a href="#"><i class="fa-solid fa-table-list"></i> Category Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-box"></i> Tour Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-list-check"></i> Order Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i> User Management</a></li>
+        <li><a href="#"><i class="fa-solid fa-user-group"></i> Contact Information</a></li>
+      </ul>
+      <hr>
+      <ul class="inner-menu"> 
+        <li> <a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        <li> <a href="#"><i class="fa-solid fa-user-gear"></i> User Profile</a></li>
+        <li><a class="inner-logout" href="#"><i class="fa-solid fa-power-off"></i> Logout</a></li>
+      </ul>
+    </nav>
+    <main class="main"> 
+      <h1 class="box-title">Create Admin Account</h1>
+      <section class="section-8"> 
+        <form>
+          <div class="inner-group"> 
+            <label class="inner-label" for="fullName">Full Name</label>
+            <input type="text" id="fullName">
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="email">Email</label>
+            <input type="email" id="email">
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="phone">Phone</label>
+            <input type="text" id="phone">
+          </div>
+          <div class="inner-group">
+            <label class="inner-label" for="role">Role</label>
+            <select id="role">
+              <option value="">-- Select Role --</option>
+              <option value="">Admin</option>
+              <option value="">Tour Manager</option>
+              <option value="">Order Manager</option>
+            </select>
+          </div>
+          <div class="inner-group">
+            <label class="inner-label" for="positionCompany">Position </label>
+            <input type="text" id="positionCompany">
+          </div>
+          <div class="inner-group"> 
+            <label class="inner-label" for="status">Status </label>
+            <select id="status">
+              <option value="">Active</option>
+              <option value="">Inactive</option>
+            </select>
+          </div>
+          <div class="inner-group">
+            <label class="inner-label" for="password">Password</label>
+            <input type="text" id="password">
+          </div>
+          <div class="inner-group inner-two-col"> 
+            <label class="inner-label" for="avatar">Avatar</label>
+            <div class="inner-upload-image">
+              <input type="file" id="avatar" accept="image/*">
+            </div>
+          </div>
+          <div class="inner-button inner-two-col"> 
+            <button>Create </button>
+          </div>
+        </form>
+        <div class="inner-back"> <a href="#">Back to Settings List</a></div>
+      </section>
+    </main>
+  </body>
+</html>
