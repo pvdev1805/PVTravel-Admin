@@ -1421,3 +1421,76 @@ a {
 /* End Responsive Section 9 */
 
 /* End Section 9 */
+
+/* Section 10 */
+.section-10 {
+  border: 1px solid #b9b9b9;
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 80px;
+  text-align: center;
+}
+
+.section-10 .inner-image {
+  width: 390px;
+  height: auto;
+  margin-bottom: 60px;
+}
+
+.section-10 .inner-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section-10 .inner-back {
+  display: inline-block;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  opacity: 0.9;
+  padding: 15px 104px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-10 .inner-back:hover {
+  opacity: 1;
+}
+
+/* Responsive Section 10 */
+@media screen and (max-width: 767.98px) {
+  .section-10 {
+    padding: 40px 30px;
+  }
+
+  .section-10 .inner-image {
+    width: 60%;
+    margin-bottom: 30px;
+  }
+
+  .section-10 .inner-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .section-10 .inner-back {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .section-10 .inner-title {
+    font-size: 20px;
+  }
+
+  .section-10 .inner-back {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+}
+/* End Responsive Section 10 */
+/* End Section 10 */
