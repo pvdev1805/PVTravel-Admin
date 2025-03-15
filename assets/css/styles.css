@@ -1364,3 +1364,60 @@ a {
 /* End Responsive Section 8 */
 
 /* End Section 8 */
+
+/* Section 9 */
+.section-9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.section-9 .inner-item {
+  border-radius: 14px;
+  background-color: #fff;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section-9 .inner-item .inner-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #e7edff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+.section-9 .inner-item .inner-text {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+  max-width: calc(100% - 140px);
+}
+
+.section-9 .inner-item:hover .inner-text {
+  color: var(--primary-color);
+}
+
+/* Responsive Section 9 */
+@media screen and (max-width: 1199.98px) {
+  .section-9 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .section-9 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+/* End Responsive Section 9 */
+
+/* End Section 9 */
