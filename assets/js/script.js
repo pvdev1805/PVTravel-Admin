@@ -32,5 +32,15 @@ if (scheduleSection8) {
 
     listItem.appendChild(cloneItem)
   })
+
+  // Show/Hide Item
+  listItem.addEventListener('click', (event) => {
+    if (event.target.closest('.inner-more')) {
+      const parentItem = event.target.closest('.inner-schedule-item')
+      if (parentItem) {
+        parentItem.classList.toggle('hidden')
+      }
+    }
+  })
 }
 // End Add New Schedule - Section 8 - Create Tour page
