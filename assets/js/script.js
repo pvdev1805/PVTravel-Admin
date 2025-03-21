@@ -35,10 +35,20 @@ if (scheduleSection8) {
 
   // Show/Hide Item
   listItem.addEventListener('click', (event) => {
+    // Show/Hide Description of Schedule Item
     if (event.target.closest('.inner-more')) {
       const parentItem = event.target.closest('.inner-schedule-item')
       if (parentItem) {
         parentItem.classList.toggle('hidden')
+      }
+    }
+
+    // Remove Schedule Item
+    if (event.target.closest('.inner-remove')) {
+      const parentItem = event.target.closest('.inner-schedule-item')
+      const totalItem = listItem.querySelectorAll('.inner-schedule-item').length
+      if (parentItem && totalItem > 1) {
+        parentItem.remove()
       }
     }
   })
