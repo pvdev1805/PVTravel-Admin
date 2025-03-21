@@ -433,10 +433,49 @@ a {
   border: 1px solid #e0e0e0;
 }
 
+.sider-overlay {
+  display: none;
+}
+
 /* Responsive Sider */
 @media screen and (max-width: 991.98px) {
-  .sider {
+  /* .sider {
     display: none;
+  }
+
+  .sider.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    z-index: 10000;
+  } */
+
+  .sider {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100%;
+    z-index: 10000;
+    transition: all 0.3s;
+  }
+
+  .sider.active {
+    left: 0;
+  }
+
+  .sider-overlay.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000076;
+    z-index: 9999;
   }
 }
 /* End Responsive Sider */
