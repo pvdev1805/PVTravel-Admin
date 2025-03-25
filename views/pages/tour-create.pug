@@ -94,7 +94,7 @@ block main
         input(type="date" id="departureDate")
       .inner-group.inner-two-col 
         label(for="information" class="inner-label") Tour Information
-        textarea(id="information")
+        textarea(id="information" textarea-mce)
       .inner-group.inner-two-col
         label(class="inner-label") Tour Schedule
         .inner-schedule
@@ -109,7 +109,7 @@ block main
                 span(class="inner-schedule-button inner-more")
                   <i class="fa-solid fa-angle-up"></i>
               .inner-schedule-body 
-                textarea
+                textarea(textarea-mce)
           .inner-schedule-create + Add Schedule
       .inner-button.inner-two-col 
         button Create

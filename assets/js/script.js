@@ -28,9 +28,13 @@ if (scheduleSection8) {
     const cloneItem = firstItem.cloneNode(true)
 
     cloneItem.querySelector('.inner-schedule-head input').value = ''
-    cloneItem.querySelector('.inner-schedule-body textarea').value = ''
+
+    const body = cloneItem.querySelector('.inner-schedule-body')
+    const id = `mce_${Date.now()}`
+    body.innerHTML = `<textarea id="${id}" textarea-mce></textarea>`
 
     listItem.appendChild(cloneItem)
+    initTinyMCE(`#${id}`)
   })
 
   // Show/Hide Item
