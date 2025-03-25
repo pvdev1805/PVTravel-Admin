@@ -6,6 +6,8 @@
     <title>Create Category</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tiny.cloud/1/jgssw01tyz343vz0wzg2xsgxmb5r5od03i211rng8l3p5abq/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="assets/js/tinymce-config.js"> </script>
   </head>
   <body>
     <header class="header"> 
@@ -77,7 +79,7 @@
           </div>
           <div class="inner-group inner-two-col"> 
             <label class="inner-label" for="description">Description</label>
-            <textarea id="description"></textarea>
+            <textarea id="description" textarea-mce></textarea>
           </div>
           <div class="inner-button inner-two-col"> 
             <button>Create</button>
