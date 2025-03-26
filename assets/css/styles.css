@@ -1382,6 +1382,53 @@ a {
   color: #ef3826;
   font-weight: 700;
 }
+
+.section-8 form .inner-upload-image {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.section-8 form .inner-upload-image .filepond--credits {
+  display: none;
+}
+
+.section-8 form .inner-upload-image .filepond--root {
+  margin-bottom: 0;
+  height: 100% !important;
+}
+
+.section-8 form .inner-upload-image .filepond--drop-label {
+  min-height: 100%;
+  cursor: pointer;
+}
+
+.section-8 form .inner-upload-image .filepond--drop-label label {
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.section-8 form .inner-upload-image .filepond--panel-root {
+  border: 1px solid #d5d5d5;
+  background-color: #f5f6fa !important;
+  border-radius: 4px;
+}
+
+.section-8 form .inner-upload-image .filepond--file-info {
+  display: none;
+}
+
+.section-8 form .inner-upload-image .filepond--action-remove-item {
+  background-color: #f93c65;
+  width: 22px;
+  height: 22px;
+  top: 4px;
+  left: calc(100% - 26px);
+  cursor: pointer;
+}
+
 /* Responsive Section 8 */
 @media screen and (max-width: 767.98px) {
   .section-8 {

@@ -74,3 +74,17 @@ if (scheduleSection8) {
   })
 }
 // End Add New Schedule - Section 8 - Create Tour page
+
+// FilePond - Upload Image
+const listFilePondImage = document.querySelectorAll('[filepond-image]')
+if (listFilePondImage) {
+  listFilePondImage.forEach((filePondImage) => {
+    FilePond.registerPlugin(FilePondPluginImagePreview)
+    FilePond.registerPlugin(FilePondPluginFileValidateType)
+
+    FilePond.create(filePondImage, {
+      labelIdle: '+'
+    })
+  })
+}
+// End FilePond - Upload Image
