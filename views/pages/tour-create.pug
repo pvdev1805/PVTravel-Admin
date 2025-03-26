@@ -110,6 +110,17 @@ block main
                   <i class="fa-solid fa-angle-up"></i>
               .inner-schedule-body 
                 textarea(textarea-mce)
+            .inner-schedule-item 
+              .inner-schedule-head 
+                span(class="inner-schedule-button inner-move")
+                  <i class="fa-solid fa-arrows-up-down-left-right"></i>
+                input(type="text")
+                span(class="inner-schedule-button inner-remove")
+                  <i class="fa-regular fa-trash-can"></i>
+                span(class="inner-schedule-button inner-more")
+                  <i class="fa-solid fa-angle-up"></i>
+              .inner-schedule-body 
+                textarea(textarea-mce)
           .inner-schedule-create + Add Schedule
       .inner-button.inner-two-col 
         button Create

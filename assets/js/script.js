@@ -56,5 +56,21 @@ if (scheduleSection8) {
       }
     }
   })
+
+  // Drag and Drop Schedule Item using SortableJS
+  new Sortable(listItem, {
+    animation: 150,
+    handle: '.inner-move',
+    onStart: (event) => {
+      const textarea = event.item.querySelector('[textarea-mce]')
+      const id = textarea.id
+      tinymce.get(id).remove()
+    },
+    onEnd: (event) => {
+      const textarea = event.item.querySelector('[textarea-mce]')
+      const id = textarea.id
+      initTinyMCE(`#${id}`)
+    }
+  })
 }
 // End Add New Schedule - Section 8 - Create Tour page
