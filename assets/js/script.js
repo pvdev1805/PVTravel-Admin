@@ -88,3 +88,51 @@ if (listFilePondImage) {
   })
 }
 // End FilePond - Upload Image
+
+// Revenue Chart - Dashboard page
+const revenueChart = document.querySelector('#revenue-chart')
+if (revenueChart) {
+  new Chart(revenueChart, {
+    type: 'line',
+    data: {
+      labels: ['01', '02', '03', '04', '05', '06', '07'],
+      datasets: [
+        {
+          label: 'Feb 2025',
+          data: [280, 120, 320, 240, 500, 370, 460],
+          borderColor: '#36a1ea',
+          borderWidth: 1.5
+        },
+        {
+          label: 'Jan 2025',
+          data: [100, 150, 120, 400, 360, 430, 410],
+          borderColor: '#fe6383',
+          borderWidth: 1.5
+        }
+      ]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Date'
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: 'Revenue (AUD)'
+          }
+        }
+      },
+      maintainAspectRatio: false
+    }
+  })
+}
+// End Revenue Chart - Dashboard page
