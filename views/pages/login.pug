@@ -8,7 +8,7 @@ block main
     h2.inner-title Sign In
     p.inner-desc Enter your email and password to access admin panel
 
-    form.inner-form
+    form.inner-form#login-form
       .inner-group 
         label(
           for="email" 
@@ -18,7 +18,7 @@ block main
         input(
           type="email"
           id="email"
-          name=""
+          name="email"
           placeholder="Example: johnsmith@gmail.com"
           class="inner-control"
         ) 
@@ -32,7 +32,7 @@ block main
         input(
           type="password"
           id="password"
-          name=""
+          name="password"
           class="inner-control"
         )
 
@@ -41,7 +41,7 @@ block main
           input(
             type="checkbox"
             id="remember-password"
-            name=""
+            name="rememberPassword"
             class="inner-check"
           )
 

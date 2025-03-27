@@ -64,6 +64,14 @@ a {
 
 .form-account .inner-group {
   margin-bottom: 30px;
+  position: relative;
+}
+
+.form-account .inner-group .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 14px;
+  font-size: 12px;
 }
 
 .form-account .inner-group .inner-label {
@@ -90,6 +98,14 @@ a {
 
 .form-account .inner-group .inner-control::placeholder {
   color: #a6a6a6;
+}
+
+.form-account .inner-group .inner-control.just-validate-error-field {
+  border-color: #ea0234;
+}
+
+.form-account .inner-group .inner-control.just-validate-success-field {
+  border-color: #00b69b;
 }
 
 .form-account .inner-meta {

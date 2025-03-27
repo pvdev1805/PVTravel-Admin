@@ -11,18 +11,18 @@
       <div class="form-account"> 
         <h2 class="inner-title">Sign In</h2>
         <p class="inner-desc">Enter your email and password to access admin panel</p>
-        <form class="inner-form">
+        <form class="inner-form" id="login-form">
           <div class="inner-group"> 
             <label class="inner-label" for="email">Email</label>
-            <input class="inner-control" type="email" id="email" name="" placeholder="Example: johnsmith@gmail.com">
+            <input class="inner-control" type="email" id="email" name="email" placeholder="Example: johnsmith@gmail.com">
           </div>
           <div class="inner-group"> 
             <label class="inner-label" for="password">Password</label>
-            <input class="inner-control" type="password" id="password" name="">
+            <input class="inner-control" type="password" id="password" name="password">
           </div>
           <div class="inner-meta"> 
             <div class="inner-confirm"> 
-              <input class="inner-check" type="checkbox" id="remember-password" name="">
+              <input class="inner-check" type="checkbox" id="remember-password" name="rememberPassword">
               <label class="inner-label" for="remember-password">Remember password</label>
             </div><a class="inner-forgot-password" href="#">Forgot password?</a>
           </div>
@@ -31,6 +31,7 @@
         <div class="inner-more"> <span>Don't have an account?</span><a href="#">Sign Up</a></div>
       </div>
     </div>
-    <script src="assets/js/script.js"> </script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+    <script src="assets/js/account.js"> </script>
   </body>
 </html>
