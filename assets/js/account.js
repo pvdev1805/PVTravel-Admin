@@ -132,3 +132,22 @@ if (forgotPasswordForm) {
     })
 }
 // End JustValidate - Forgot Password Form Validation
+
+//JustValidate - OTP Password Form Validation
+const otpPasswordForm = document.querySelector('#otp-password-form')
+if (otpPasswordForm) {
+  const validator = new JustValidate('#otp-password-form')
+
+  validator
+    .addField('#otp', [
+      {
+        rule: 'required',
+        errorMessage: 'Please enter the OTP code sent to your email!'
+      }
+    ])
+    .onSuccess((event) => {
+      const otp = event.target.otp.value
+      console.log('OTP Code:', otp)
+    })
+}
+//End JustValidate - OTP Password Form Validation
