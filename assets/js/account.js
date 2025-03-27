@@ -151,3 +151,57 @@ if (otpPasswordForm) {
     })
 }
 //End JustValidate - OTP Password Form Validation
+
+// JustValidate - Reset Password Form Validation
+const resetPasswordForm = document.querySelector('#reset-password-form')
+if (resetPasswordForm) {
+  const validator = new JustValidate('#reset-password-form')
+
+  validator
+    .addField('#password', [
+      {
+        rule: 'required',
+        errorMessage: 'Please enter your new password!'
+      },
+      {
+        validator: (value) => value.length >= 8,
+        errorMessage: 'Password must be at least 8 characters!'
+      },
+      {
+        validator: (value) => /[A-Z]/.test(value),
+        errorMessage: 'Password must contain at least one uppercase letter!'
+      },
+      {
+        validator: (value) => /[a-z]/.test(value),
+        errorMessage: 'Password must contain at least one lowercase letter!'
+      },
+      {
+        validator: (value) => /\d/.test(value),
+        errorMessage: 'Password must contain at least one digit!'
+      },
+      {
+        validator: (value) => /[@$!%*?&]/.test(value),
+        // validator: (value) => /\W/.test(value),
+        errorMessage: 'Password must contain at least one special character!'
+      }
+    ])
+    .addField('#confirm-password', [
+      {
+        rule: 'required',
+        errorMessage: 'Please confirm your new password!'
+      },
+      {
+        validator: (value, fields) => {
+          // const password = resetPasswordForm.querySelector('#password').value
+          const password = fields['#password'].elem.value
+          return value === password
+        },
+        errorMessage: 'Confirm password does not match!'
+      }
+    ])
+    .onSuccess((event) => {
+      const password = event.target.password.value
+      console.log('New Password:', password)
+    })
+}
+// End JustValidate - Reset Password Form Validation
