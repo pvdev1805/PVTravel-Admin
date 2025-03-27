@@ -118,6 +118,14 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  position: relative;
+}
+
+.form-account .inner-confirm .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 6px;
+  font-size: 12px;
 }
 
 .form-account .inner-confirm .inner-check {

@@ -8,7 +8,7 @@ block main
     h2.inner-title Sign Up
     p.inner-desc Create your account to access admin panel
 
-    form.inner-form
+    form.inner-form#register-form
       .inner-group 
         label(
           for="fullName"
@@ -18,7 +18,7 @@ block main
         input(
           type="text"
           id="fullName"
-          name=""
+          name="fullName"
           placeholder="Example: John Smith"
           class="inner-control"
         )
@@ -32,7 +32,7 @@ block main
         input(
           type="email"
           id="email"
-          name=""
+          name="email"
           placeholder="Example: johnsmith@gmail.com"
           class="inner-control"
         )
@@ -46,7 +46,7 @@ block main
         input(
           type="password"
           id="password"
-          name=""
+          name="password"
           class="inner-control"
         )
 
@@ -55,7 +55,7 @@ block main
           input(
             type="checkbox"
             id="agree"
-            name=""
+            name="agree"
             class="inner-check"
           )
 
