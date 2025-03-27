@@ -109,3 +109,26 @@ if (registerForm) {
     })
 }
 // End JustValidate - Register Form Validation
+
+// JustValidate - Forgot Password Form Validation
+const forgotPasswordForm = document.querySelector('#forgot-password-form')
+if (forgotPasswordForm) {
+  const validator = new JustValidate('#forgot-password-form')
+
+  validator
+    .addField('#email', [
+      {
+        rule: 'required',
+        errorMessage: 'Please enter your email!'
+      },
+      {
+        rule: 'email',
+        errorMessage: 'Email is invalid!'
+      }
+    ])
+    .onSuccess((event) => {
+      const email = event.target.email.value
+      console.log('Email:', email)
+    })
+}
+// End JustValidate - Forgot Password Form Validation
