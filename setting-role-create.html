@@ -47,36 +47,36 @@
     <main class="main"> 
       <h1 class="box-title">Create Role</h1>
       <section class="section-8"> 
-        <form>
+        <form id="setting-role-create-form">
           <div class="inner-group"> 
             <label class="inner-label" for="name">Role Name</label>
-            <input type="text" id="name">
+            <input type="text" id="name" name="name">
           </div>
           <div class="inner-group"> 
             <label class="inner-label" for="description">Description</label>
-            <input type="text" id="description">
+            <input type="text" id="description" name="description">
           </div>
           <div class="inner-group"> 
             <label class="inner-label" for="phone">Permission</label>
             <div class="inner-checkbox-list"> 
               <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+                <input type="checkbox" name="permissions" value="read-dashboard">
                 <label>Read - Dashboard</label>
               </div>
               <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+                <input type="checkbox" name="permissions" value="read-category">
                 <label>Read - Category</label>
               </div>
               <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+                <input type="checkbox" name="permissions" value="create-category">
                 <label>Create - Category</label>
               </div>
               <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+                <input type="checkbox" name="permissions" value="edit-category">
                 <label>Edit - Category</label>
               </div>
               <div class="inner-checkbox-item"> 
-                <input type="checkbox">
+                <input type="checkbox" name="permissions" value="delete-category">
                 <label>Delete - Category</label>
               </div>
             </div>

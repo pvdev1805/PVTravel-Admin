@@ -504,3 +504,35 @@ if (settingAccountAdminCreateForm) {
     })
 }
 // End JustValidate - Setting Account AdminCreate Form Validation
+
+// JustValidate - Setting Role Create Form Validation
+const settingRoleCreateForm = document.querySelector('#setting-role-create-form')
+if (settingRoleCreateForm) {
+  const validator = new JustValidate('#setting-role-create-form')
+
+  validator
+    .addField('#name', [
+      {
+        rule: 'required',
+        errorMessage: 'Role name is required!'
+      }
+    ])
+    .onSuccess((event) => {
+      const name = event.target.name.value
+      const description = event.target.description.value
+
+      const permissions = []
+
+      // Permissions
+      const listElementPermission = settingRoleCreateForm.querySelectorAll(`input[name="permissions"]:checked`)
+      listElementPermission.forEach((input) => {
+        permissions.push(input.value)
+      })
+      // End Permissions
+
+      console.log('Role Name:', name)
+      console.log('Description:', description)
+      console.log('Permissions:', permissions)
+    })
+}
+// End JustValidate - Setting Role Create Form Validation
