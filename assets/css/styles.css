@@ -1167,6 +1167,17 @@ a {
   gap: 30px;
 }
 
+.section-8 form .inner-group {
+  position: relative;
+}
+
+.section-8 form .inner-group .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 14px;
+  font-size: 12px;
+}
+
 .section-8 .inner-group .inner-label {
   margin-bottom: 11px;
   display: block;
@@ -1188,6 +1199,10 @@ a {
   color: var(--text-color);
   font-size: 14px;
   font-weight: 500;
+}
+
+.section-8 form .inner-group .just-validate-error-field {
+  border-color: #ea0234;
 }
 
 .section-8 .inner-group textarea {
