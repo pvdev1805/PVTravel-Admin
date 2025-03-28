@@ -47,31 +47,31 @@
     <main class="main"> 
       <h1 class="box-title">User Profile </h1>
       <section class="section-8"> 
-        <form>
+        <form id="profile-edit-form">
           <div class="inner-group"> 
             <label class="inner-label" for="fullName">Full Name</label>
-            <input type="text" id="fullName" value="Nicholas Cage">
+            <input type="text" id="fullName" name="fullName" value="Nicholas Cage">
           </div>
           <div class="inner-group"> 
             <label class="inner-label" for="email">Email</label>
-            <input type="email" id="email" value="nicholascage@gmail.com">
+            <input type="email" id="email" name="email" value="nicholascage@gmail.com">
           </div>
           <div class="inner-group"> 
             <label class="inner-label" for="phone">Phone</label>
-            <input type="text" id="phone" value="0123456789">
+            <input type="text" id="phone" name="phone" value="0123456789">
           </div>
           <div class="inner-group"> 
             <label class="inner-label" for="positionCompany">Position</label>
-            <input type="text" id="positionCompany" value="President" readonly>
+            <input type="text" id="positionCompany" name="positionCompany" value="President" readonly>
           </div>
           <div class="inner-group"> 
             <label class="inner-label" for="role">Role</label>
-            <input type="text" id="role" value="Admin" readonly>
+            <input type="text" id="role" name="role" value="Admin" readonly>
           </div>
           <div class="inner-group inner-two-col"> 
             <label class="inner-label" for="avatar">Avatar </label>
             <div class="inner-upload-image">
-              <input type="file" id="avatar" accept="image/*" filepond-image>
+              <input type="file" id="avatar" name="avatar" accept="image/*" filepond-image>
             </div>
           </div>
           <div class="inner-button inner-two-col"> 
