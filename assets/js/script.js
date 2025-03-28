@@ -77,12 +77,13 @@ if (scheduleSection8) {
 
 // FilePond - Upload Image
 const listFilePondImage = document.querySelectorAll('[filepond-image]')
+let filePond = {}
 if (listFilePondImage) {
   listFilePondImage.forEach((filePondImage) => {
     FilePond.registerPlugin(FilePondPluginImagePreview)
     FilePond.registerPlugin(FilePondPluginFileValidateType)
 
-    FilePond.create(filePondImage, {
+    filePond[filePondImage.name] = FilePond.create(filePondImage, {
       labelIdle: '+'
     })
   })
@@ -136,3 +137,39 @@ if (revenueChart) {
   })
 }
 // End Revenue Chart - Dashboard page
+
+// JustValidate - Category Create Form Validation
+const categoryCreateForm = document.querySelector('#category-create-form')
+if (categoryCreateForm) {
+  const validator = new JustValidate('#category-create-form')
+
+  validator
+    .addField('#name', [
+      {
+        rule: 'required',
+        errorMessage: ' Please enter category name!'
+      }
+    ])
+    .onSuccess((event) => {
+      const name = event.target.name.value
+      const parent = event.target.parent.value
+      const position = event.target.position.value
+      const status = event.target.status.value
+      const avatars = filePond.avatar.getFiles()
+
+      let avatar = null
+      if (avatars.length > 0) {
+        avatar = avatars[0].file
+      }
+
+      const description = tinymce.get('description').getContent()
+
+      console.log('Category Name:', name)
+      console.log('Parent Category:', parent)
+      console.log('Position:', position)
+      console.log('Status:', status)
+      console.log('Avatar:', avatar)
+      console.log('Description:', description)
+    })
+}
+// End JustValidate - Category Create Form Validation
