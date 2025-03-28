@@ -337,3 +337,49 @@ if (orderEditForm) {
     })
 }
 // End JustValidate - Order Edit Form Validation
+
+// JustValidate - Setting Website Info Form Validation
+const settingWebsiteInfoForm = document.querySelector('#setting-website-info-form')
+if (settingWebsiteInfoForm) {
+  const validator = new JustValidate('#setting-website-info-form')
+
+  validator
+    .addField('#websiteName', [
+      {
+        rule: 'required',
+        errorMessage: 'Website name is required!'
+      }
+    ])
+    .addField('#email', [
+      {
+        rule: 'email',
+        errorMessage: 'Email is invalid!'
+      }
+    ])
+    .onSuccess((event) => {
+      const websiteName = event.target.websiteName.value
+      const phone = event.target.phone.value
+      const email = event.target.email.value
+      const address = event.target.address.value
+
+      const logos = filePond.logo.getFiles()
+      let logo = null
+      if (logos.length > 0) {
+        logo = logos[0].file
+      }
+
+      const favicons = filePond.favicon.getFiles()
+      let favicon = null
+      if (favicons.length > 0) {
+        favicon = favicons[0].file
+      }
+
+      console.log('Website Name:', websiteName)
+      console.log('Phone:', phone)
+      console.log('Email:', email)
+      console.log('Address:', address)
+      console.log('Logo:', logo)
+      console.log('Favicon:', favicon)
+    })
+}
+// End JustValidate - Setting Website Info Form Validation
