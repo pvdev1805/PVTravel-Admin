@@ -10,15 +10,15 @@ block main
   section.section-8 
     form
       .inner-group
-        label(for="name" class="inner-label") Category Name
+        label(for="name" class="inner-label") Tour Name
         input(type="text" id="name")
       .inner-group 
-        label(for="parent" class="inner-label") Parent Category
+        label(for="parent" class="inner-label") Category
         select(id="parent")
           option(value="") -- Select Category --
-          option(value="") Category 1
-          option(value="") Category 2
-          option(value="") Category 3
+          option(value="1") Category 1
+          option(value="2") Category 2
+          option(value="3") Category 3
       .inner-group 
         label(for="position" class="inner-label") Position
         input(type="number" id="position")
@@ -26,8 +26,8 @@ block main
         label(for="status" class="inner-label") Status
         select(id="status")
           option(value="") -- Select Status --
-          option(value="") Active
-          option(value="") Inactive
+          option(value="active") Active
+          option(value="inactive") Inactive
       .inner-group.inner-two-col
         label(for="avatar" class="inner-label") Avatar
         div(class="inner-upload-image")
