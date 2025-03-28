@@ -621,3 +621,56 @@ if (profileEditForm) {
     })
 }
 // JustValidate - Profile Edit Form Validation
+
+// JustValidate - Profile Change Password Form Validation
+const profileChangePasswordForm = document.querySelector('#profile-change-password-form')
+if (profileChangePasswordForm) {
+  const validator = new JustValidate('#profile-change-password-form')
+
+  validator
+    .addField('#password', [
+      {
+        rule: 'required',
+        errorMessage: 'Please enter new password!'
+      },
+      {
+        validator: (value) => value.length >= 8,
+        errorMessage: 'Password must be at least 8 characters!'
+      },
+      {
+        validator: (value) => /[A-Z]/.test(value),
+        errorMessage: 'Password must contain at least one uppercase letter!'
+      },
+      {
+        validator: (value) => /[a-z]/.test(value),
+        errorMessage: 'Password must contain at least one lowercase letter!'
+      },
+      {
+        validator: (value) => /[0-9]/.test(value),
+        errorMessage: 'Password must contain at least one number!'
+      },
+      {
+        validator: (value) => /[@$!%*?&]/.test(value),
+        errorMessage: 'Password must contain at least one special character!'
+      }
+    ])
+    .addField('#confirmPassword', [
+      {
+        rule: 'required',
+        errorMessage: 'Please confirm your new password!'
+      },
+      {
+        validator: (value, fields) => {
+          const password = fields['#password'].elem.value
+          return value === password
+        },
+        errorMessage: 'Confirm password does not match!'
+      }
+    ])
+    .onSuccess((event) => {
+      const password = event.target.password.value
+
+      console.log('New Password:', password)
+    })
+}
+// End JustValidate - Profile Change Password Form Validation
