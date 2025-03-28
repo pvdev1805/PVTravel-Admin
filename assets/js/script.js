@@ -383,3 +383,124 @@ if (settingWebsiteInfoForm) {
     })
 }
 // End JustValidate - Setting Website Info Form Validation
+
+// JustValidate - Setting Account Admin Create Form Validation
+const settingAccountAdminCreateForm = document.querySelector('#setting-account-admin-create-form')
+if (settingAccountAdminCreateForm) {
+  const phoneInput = settingAccountAdminCreateForm.querySelector('#phone')
+  phoneInput.addEventListener('keydown', (event) => {
+    // Allow Backspace, Delete, Arrow keys, and Tab keys
+    if (
+      event.key === 'Backspace' ||
+      event.key === 'Delete' ||
+      event.key === 'ArrowLeft' ||
+      event.key === 'ArrowRight' ||
+      event.key === 'Tab'
+    ) {
+      return
+    }
+
+    // Allow numeric characters (0-9) only
+    if (/[^0-9]/.test(event.key)) {
+      event.preventDefault()
+    }
+  })
+
+  const validator = new JustValidate('#setting-account-admin-create-form')
+
+  validator
+    .addField('#fullName', [
+      {
+        rule: 'required',
+        errorMessage: 'Full name is required!'
+      },
+      {
+        rule: 'minLength',
+        value: 5,
+        errorMessage: 'Full name must be at least 5 characters!'
+      },
+      {
+        rule: 'maxLength',
+        value: 50,
+        errorMessage: 'Full name must not exceed 50 characters!'
+      }
+    ])
+    .addField('#email', [
+      {
+        rule: 'required',
+        errorMessage: 'Email is required!'
+      },
+      {
+        rule: 'email',
+        errorMessage: 'Email is invalid!'
+      }
+    ])
+    .addField('#phone', [
+      {
+        rule: 'required',
+        errorMessage: 'Phone is required!'
+      },
+      {
+        rule: 'customRegexp',
+        value: /^(61|0)[2-578]\d{8}$/g,
+        errorMessage: 'Phone number is invalid!'
+      }
+    ])
+    .addField('#positionCompany', [
+      {
+        rule: 'required',
+        errorMessage: 'Position in company is required!'
+      }
+    ])
+    .addField('#password', [
+      {
+        rule: 'required',
+        errorMessage: 'Password is required!'
+      },
+      {
+        validator: (value) => value.length >= 8,
+        errorMessage: 'Password must be at least 8 characters!'
+      },
+      {
+        validator: (value) => /[A-Z]/.test(value),
+        errorMessage: 'Password must contain at least one uppercase letter!'
+      },
+      {
+        validator: (value) => /[a-z]/.test(value),
+        errorMessage: 'Password must contain at least one lowercase letter!'
+      },
+      {
+        validator: (value) => /[0-9]/.test(value),
+        errorMessage: 'Password must contain at least one number!'
+      },
+      {
+        validator: (value) => /[@$!%*?&]/.test(value),
+        errorMessage: 'Password must contain at least one special character!'
+      }
+    ])
+    .onSuccess((event) => {
+      const fullName = event.target.fullName.value
+      const email = event.target.email.value
+      const phone = event.target.phone.value
+      const role = event.target.role.value
+      const positionCompany = event.target.positionCompany.value
+      const status = event.target.status.value
+      const password = event.target.password.value
+
+      const avatars = filePond.avatar.getFiles()
+      let avatar = null
+      if (avatars.length > 0) {
+        avatar = avatars[0].file
+      }
+
+      console.log('Full Name:', fullName)
+      console.log('Email:', email)
+      console.log('Phone:', phone)
+      console.log('Role:', role)
+      console.log('Position in Company:', positionCompany)
+      console.log('Status:', status)
+      console.log('Password:', password)
+      console.log('Avatar:', avatar)
+    })
+}
+// End JustValidate - Setting Account AdminCreate Form Validation
