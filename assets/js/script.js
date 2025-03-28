@@ -267,3 +267,73 @@ if (tourCreateForm) {
     })
 }
 // End JustValidate - Tour Create Form Validation
+
+// JustValidate - Order Edit Form Validation
+const orderEditForm = document.querySelector('#order-edit-form')
+if (orderEditForm) {
+  const phoneInput = orderEditForm.querySelector('#phone')
+  phoneInput.addEventListener('keydown', (event) => {
+    // Allow Backspace, Delete, Arrow keys, and Tab keys
+    if (
+      event.key === 'Backspace' ||
+      event.key === 'Delete' ||
+      event.key === 'ArrowLeft' ||
+      event.key === 'ArrowRight' ||
+      event.key === 'Tab'
+    ) {
+      return
+    }
+
+    // Allow numeric characters (0-9) only
+    if (/[^0-9]/.test(event.key)) {
+      event.preventDefault()
+    }
+  })
+
+  const validator = new JustValidate('#order-edit-form')
+
+  validator
+    .addField('#fullName', [
+      {
+        rule: 'required',
+        errorMessage: 'Full name is required!'
+      },
+      {
+        rule: 'minLength',
+        value: 5,
+        errorMessage: 'Full name must be at least 5 characters!'
+      },
+      {
+        rule: 'maxLength',
+        value: 50,
+        errorMessage: 'Full name must not exceed 50 characters!'
+      }
+    ])
+    .addField('#phone', [
+      {
+        rule: 'required',
+        errorMessage: 'Phone is required!'
+      },
+      {
+        rule: 'customRegexp',
+        value: /^(61|0)[2-578]\d{8}$/g,
+        errorMessage: 'Phone number is invalid!'
+      }
+    ])
+    .onSuccess((event) => {
+      const fullName = event.target.fullName.value
+      const phone = event.target.phone.value
+      const note = event.target.note.value
+      const paymentMethod = event.target.paymentMethod.value
+      const paymentStatus = event.target.paymentStatus.value
+      const status = event.target.status.value
+
+      console.log('Full Name:', fullName)
+      console.log('Phone:', phone)
+      console.log('Note:', note)
+      console.log('Payment Method:', paymentMethod)
+      console.log('Payment Status:', paymentStatus)
+      console.log('Status:', status)
+    })
+}
+// End JustValidate - Order Edit Form Validation
