@@ -173,3 +173,97 @@ if (categoryCreateForm) {
     })
 }
 // End JustValidate - Category Create Form Validation
+
+// JustValidate - Tour Create Form Validation
+const tourCreateForm = document.querySelector('#tour-create-form')
+if (tourCreateForm) {
+  const validator = new JustValidate('#tour-create-form')
+
+  validator
+    .addField('#name', [
+      {
+        rule: 'required',
+        errorMessage: 'Please enter tour name!'
+      }
+    ])
+    .onSuccess((event) => {
+      const name = event.target.name.value
+      const category = event.target.category.value
+      const position = event.target.position.value
+      const status = event.target.status.value
+      const avatars = filePond.avatar.getFiles()
+
+      let avatar = null
+      if (avatars.length > 0) {
+        avatar = avatars[0].file
+      }
+
+      const priceAdult = event.target.priceAdult.value
+      const priceChildren = event.target.priceChildren.value
+      const priceBaby = event.target.priceBaby.value
+
+      const priceNewAdult = event.target.priceNewAdult.value
+      const priceNewChildren = event.target.priceNewChildren.value
+      const priceNewBaby = event.target.priceNewBaby.value
+
+      const stockAdult = event.target.stockAdult.value
+      const stockChildren = event.target.stockChildren.value
+      const stockBaby = event.target.stockBaby.value
+
+      const locations = []
+
+      const time = event.target.time.value
+      const vehicle = event.target.vehicle.value
+      const departureDate = event.target.departureDate.value
+
+      const information = tinymce.get('information').getContent()
+
+      const schedules = []
+
+      // Locations
+      const listElementLocation = tourCreateForm.querySelectorAll(`input[name="locations"]:checked`)
+      listElementLocation.forEach((input) => {
+        locations.push(input.value)
+      })
+      // End Locations
+
+      // Schedules
+      const listElementSchedule = tourCreateForm.querySelectorAll('.inner-schedule-item')
+      listElementSchedule.forEach((scheduleItem) => {
+        const input = scheduleItem.querySelector(`input`)
+        const title = input.value
+
+        const textarea = scheduleItem.querySelector(`textarea`)
+        const idTextarea = textarea.id
+        const description = tinymce.get(idTextarea).getContent()
+
+        schedules.push({
+          title: title,
+          description: description
+        })
+      })
+      // End Schedules
+
+      console.log('Tour Name:', name)
+      console.log('Category:', category)
+      console.log('Position:', position)
+      console.log('Status:', status)
+      console.log('Avatar:', avatar)
+      console.log('Price Old Adult:', priceAdult)
+      console.log('Price Old Children:', priceChildren)
+      console.log('Price Old Baby:', priceBaby)
+      console.log('Price New Adult:', priceNewAdult)
+      console.log('Price New Children:', priceNewChildren)
+      console.log('Price New Baby:', priceNewBaby)
+      console.log('Stock Adult:', stockAdult)
+      console.log('Stock Children:', stockChildren)
+      console.log('Stock Baby:', stockBaby)
+      console.log('Locations:', locations)
+      console.log('Time:', time)
+      console.log('Vehicle:', vehicle)
+      console.log('Departure Date:', departureDate)
+      console.log('Information:', information)
+      console.log('Schedules:', schedules)
+    })
+}
+// End JustValidate - Tour Create Form Validation
